@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 
+	namespace：命名空间;指定为接口的全类名
+	id:唯一标识；指定为对应方法名
+	parameterType：参数类型 
+	resultType：返回值
+	#{} 占位符
+ -->
+<mapper namespace="com.bigpillar.crud.dao.DeptMapper">
+	<select id="getDeptById" parameterType="Integer"
+		resultType="com.bigpillar.crud.bean.Dept">
+		select * from dept where id=#{v}
+	</select>
+</mapper>
