@@ -28,7 +28,10 @@ public class MyBatisTest {
 			DeptMapper deptMapper = sqlSession.getMapper(DeptMapper.class);
 			Dept dept = deptMapper.getDeptById(1);
 			System.out.println(dept);
-		} finally {
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		finally {
 			sqlSession.close();
 		}
 	}
